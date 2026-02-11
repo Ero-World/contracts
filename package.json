@@ -24,14 +24,5 @@
   "dependencies": {
     "@nestjs/microservices": "^11.1.13",
     "rxjs": "^7.8.2"
-  },
-  "exports": {
-    ".": {
-      "require": "./dist/*.js",
-      "import": "./dist/*.js",
-      "types": "./dist/*.d.ts"
-    },
-    "./proto/*": "./proto/*",
-    "./package.json": "./package.json"
   }
 }
