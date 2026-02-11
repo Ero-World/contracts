@@ -4,7 +4,7 @@
   "description": "Protobuf definitions and generated TypeScript types",
   "license": "ISC",
   "main": "dist/auth.js",
-  "types": "gen/auth.d.ts",
+  "types": "dist/auth.d.ts",
   "type": "commonjs",
   "scripts": {
     "release": "node scripts/release.mjs",
