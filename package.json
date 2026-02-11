@@ -26,7 +26,12 @@
     "rxjs": "^7.8.2"
   },
   "exports": {
-    "./*": "./dist/*",
-    "./proto/*": "./proto/*"
+    ".": {
+      "require": "./dist/*.js",
+      "import": "./dist/*.js",
+      "types": "./dist/*.d.ts"
+    },
+    "./proto/*": "./proto/*",
+    "./package.json": "./package.json"
   }
 }
