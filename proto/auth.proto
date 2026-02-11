@@ -4,8 +4,8 @@ package auth.v1;
 import "google/protobuf/empty.proto";
 
 enum Role {
-  master = 0;
-  salon = 1;
+  MASTER = 0;
+  SALON = 1;
 }
 
 service AuthService {

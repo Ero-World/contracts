@@ -3,7 +3,6 @@
   "version": "1.0.3",
   "description": "Protobuf definitions and generated TypeScript types",
   "license": "ISC",
-  "type": "module",
   "scripts": {
     "release": "node scripts/release.js",
     "generate": "protoc -I ./proto --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./gen ./proto/*.proto --ts_proto_opt=nestJs=true,package=omit"
