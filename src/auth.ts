@@ -12,8 +12,8 @@ import { Empty } from "./google/protobuf/empty";
 export const protobufPackage = "auth.v1";
 
 export enum Role {
-  master = 0,
-  salon = 1,
+  MASTER = 0,
+  SALON = 1,
   UNRECOGNIZED = -1,
 }
 

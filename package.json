@@ -3,9 +3,12 @@
   "version": "1.0.4",
   "description": "Protobuf definitions and generated TypeScript types",
   "license": "ISC",
+  "main": "dist/auth.js",
+  "types": "gen/auth.d.ts",
+  "type": "commonjs",
   "scripts": {
-    "release": "node scripts/release.js",
-    "generate": "protoc -I ./proto --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./gen ./proto/*.proto --ts_proto_opt=nestJs=true,package=omit"
+    "release": "node scripts/release.mjs",
+    "generate": "protoc -I ./proto --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./src ./proto/*.proto --ts_proto_opt=nestJs=true,package=omit"
   },
   "publishConfig": {
     "access": "public"
@@ -15,7 +18,8 @@
     "email": "scerep529@gmail.com"
   },
   "devDependencies": {
-    "ts-proto": "^2.11.2"
+    "ts-proto": "^2.11.2",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "@nestjs/microservices": "^11.1.13",

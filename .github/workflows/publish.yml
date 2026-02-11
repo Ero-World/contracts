@@ -28,6 +28,9 @@ jobs:
       - name: Generate TS Protobuf
         run: yarn generate
 
+      - name: Build TS
+        run: yarn tsc
+
       - name: Publish package
         run: npm publish
         env:
