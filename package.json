@@ -24,5 +24,8 @@
   "dependencies": {
     "@nestjs/microservices": "^11.1.13",
     "rxjs": "^7.8.2"
+  },
+  "exports": {
+    "./proto/*": "./proto/*"
   }
 }
