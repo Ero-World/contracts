@@ -3,9 +3,9 @@
   "version": "1.0.2",
   "description": "Protobuf definitions and generated TypeScript types",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "release": "node scripts/release.mjs",
+    "release": "node scripts/release.js",
     "generate": "protoc -I ./proto --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./gen ./proto/*.proto --ts_proto_opt=nestJs=true,package=omit"
   },
   "publishConfig": {
