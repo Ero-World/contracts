@@ -1,0 +1,46 @@
+syntax = "proto3";
+package auth.v1;
+
+import "google/protobuf/empty.proto";
+
+enum Role {
+  master = 0;
+  salon = 1;
+}
+
+service AuthService {
+  rpc Register (RegisterRequest) returns (RegisterResponse);
+  rpc Login (LoginRequest) returns (TokensResponse);
+  rpc Verify (google.protobuf.Empty) returns (TokensResponse);
+  rpc Refresh (google.protobuf.Empty) returns (TokensResponse);
+}
+
+message RegisterRequest {
+  string email = 1;
+  string password = 2;
+  string password_confirm = 3;
+  Role role = 4;
+}
+
+message RegisterResponse {
+  bool ok = 1;
+  string message = 2;
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message TokensResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
+message VerifyRequest {
+  string token = 1;
+}
+
+// message RefreshRequest {
+
+// }

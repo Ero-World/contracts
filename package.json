@@ -1,0 +1,25 @@
+{
+  "name": "@ero-world/contracts",
+  "version": "1.0.0",
+  "description": "Protobuf definitions and generated TypeScript types",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "release": "node scripts/release.js",
+    "generate": "protoc -I ./proto --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./gen ./proto/*.proto --ts_proto_opt=nestJs=true,package=omit"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Kirill",
+    "email": "scerep529@gmail.com"
+  },
+  "devDependencies": {
+    "ts-proto": "^2.11.2"
+  },
+  "dependencies": {
+    "@nestjs/microservices": "^11.1.13",
+    "rxjs": "^7.8.2"
+  }
+}
