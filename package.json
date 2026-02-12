@@ -3,8 +3,8 @@
   "version": "1.1.7",
   "description": "Protobuf definitions and generated TypeScript types",
   "license": "ISC",
-  "main": "dist/auth.js",
-  "types": "dist/auth.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "commonjs",
   "scripts": {
     "release": "node scripts/release.mjs",
@@ -18,6 +18,7 @@
     "email": "scerep529@gmail.com"
   },
   "devDependencies": {
+    "@types/node": "^25.2.3",
     "ts-proto": "^2.11.2",
     "typescript": "^5.9.3"
   },
