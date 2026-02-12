@@ -1,6 +1,6 @@
 {
   "name": "@ero-world/contracts",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Protobuf definitions and generated TypeScript types",
   "license": "ISC",
   "main": "dist/index.js",
