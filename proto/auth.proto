@@ -42,6 +42,7 @@ message GetAuthUrlResponse {
 }
 message CallbackRequest {
   string code = 1;
+  string provider = 2;
 }
 message TokensResponse {
   string access_token = 1;
