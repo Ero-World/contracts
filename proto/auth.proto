@@ -13,7 +13,7 @@ service AuthService {
   rpc Login (LoginRequest) returns (TokensResponse);
   rpc Verify (google.protobuf.Empty) returns (TokensResponse);
   rpc Refresh (google.protobuf.Empty) returns (TokensResponse);
-  rpc Redirect (RedirectRequest) returns (RedirectResponse);
+  rpc GetAuthUrl (GetAuthUrlRequest) returns (GetAuthUrlResponse);
   rpc Callback (CallbackRequest) returns (TokensResponse);
 }
 
@@ -34,10 +34,10 @@ message VerifyRequest {
   string token = 1;
 }
 
-message RedirectRequest {
+message GetAuthUrlRequest {
   string provider = 1;
 }
-message RedirectResponse {
+message GetAuthUrlResponse {
   string url = 1;
 }
 message CallbackRequest {
