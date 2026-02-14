@@ -13,6 +13,8 @@ service AuthService {
   rpc Login (LoginRequest) returns (TokensResponse);
   rpc Verify (google.protobuf.Empty) returns (TokensResponse);
   rpc Refresh (google.protobuf.Empty) returns (TokensResponse);
+  rpc Redirect (RedirectRequest) returns (RedirectResponse);
+  rpc Callback (CallbackRequest) returns (TokensResponse);
 }
 
 message RegisterRequest {
@@ -20,26 +22,28 @@ message RegisterRequest {
   string password = 2;
   Role role = 3;
 }
-
 message RegisterResponse {
   bool ok = 1;
   string message = 2;
 }
-
 message LoginRequest {
   string email = 1;
   string password = 2;
 }
-
-message TokensResponse {
-  string access_token = 1;
-  string refresh_token = 2;
-}
-
 message VerifyRequest {
   string token = 1;
 }
 
-// message RefreshRequest {
-
-// }
+message RedirectRequest {
+  string provider = 1;
+}
+message RedirectResponse {
+  string url = 1;
+}
+message CallbackRequest {
+  string code = 1;
+}
+message TokensResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+}
