@@ -11,7 +11,7 @@ enum Role {
 service AuthService {
   rpc Register (RegisterRequest) returns (RegisterResponse);
   rpc Login (LoginRequest) returns (TokensResponse);
-  rpc Verify (google.protobuf.Empty) returns (TokensResponse);
+  rpc Verify (VerifyRequest) returns (TokensResponse);
   rpc Refresh (google.protobuf.Empty) returns (TokensResponse);
   rpc GetAuthUrl (GetAuthUrlRequest) returns (GetAuthUrlResponse);
   rpc Callback (CallbackRequest) returns (TokensResponse);
