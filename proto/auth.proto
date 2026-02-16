@@ -46,17 +46,17 @@ message RefreshResponse{
   string refresh_token = 2;
 }
 
-message GetAuthUrlRequest {
-  string provider = 1;
-}
-message GetAuthUrlResponse {
-  string url = 1;
-}
 message CallbackRequest {
   string code = 1;
   string provider = 2;
 }
 message CallbackResponse {
-  string code = 1;
-  string provider = 2;
+  string access_token = 1;
+  string refresh_token = 2;
+}
+message GetAuthUrlRequest {
+  string provider = 1;
+}
+message GetAuthUrlResponse {
+  string url = 1;
 }
